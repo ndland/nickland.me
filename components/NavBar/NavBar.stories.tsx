@@ -8,13 +8,17 @@ export default {
   title: "Components/NavBar",
 } as Meta;
 
-export const Primary: React.VFC<NavBarProps> = (args) => <NavBar {...args} />;
+export const Primary = (
+  args: JSX.IntrinsicAttributes & NavBarProps & { children?: React.ReactNode }
+) => <NavBar {...args} />;
 Primary.args = {
   url:
     "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png",
 };
 
-export const WithScrollableText: React.VFC<NavBarProps> = (args) => {
+export const WithScrollableText = (
+  args: JSX.IntrinsicAttributes & NavBarProps & { children?: React.ReactNode }
+) => {
   return (
     <>
       <NavBar {...args} />
@@ -26,7 +30,9 @@ WithScrollableText.args = {
   ...Primary.args,
 };
 
-export const WithAlternateLogo: React.VFC<NavBarProps> = (args) => {
+export const WithAlternateLogo = (
+  args: JSX.IntrinsicAttributes & NavBarProps & { children?: React.ReactNode }
+) => {
   return <NavBar {...args} />;
 };
 WithAlternateLogo.args = {
