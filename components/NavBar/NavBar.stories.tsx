@@ -10,10 +10,19 @@ export default {
 
 export const Primary = (
   args: JSX.IntrinsicAttributes & NavBarProps & { children?: React.ReactNode }
-) => <NavBar {...args} />;
+) => (
+  <NavBar {...args}>
+    <div className="flex items-center py-2 w-16 mr-4">
+      <img
+        alt="tailwind"
+        src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
+      />
+      <div className="text-white ml-2">NickLand.me</div>
+    </div>
+  </NavBar>
+);
 Primary.args = {
-  url:
-    "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png",
+  classes: "items-center justify-between flex bg-gray-800 px-2",
 };
 
 export const WithScrollableText = (
@@ -21,7 +30,15 @@ export const WithScrollableText = (
 ) => {
   return (
     <>
-      <NavBar {...args} />
+      <NavBar {...args}>
+        <div className="flex items-center py-2 w-16 mr-4">
+          <img
+            alt="tailwind"
+            src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
+          />
+          <div className="text-white ml-2">NickLand.me</div>
+        </div>
+      </NavBar>
       <LoremIpsum p={10} />
     </>
   );
@@ -30,12 +47,15 @@ WithScrollableText.args = {
   ...Primary.args,
 };
 
-export const WithAlternateLogo = (
+export const WithNoImage = (
   args: JSX.IntrinsicAttributes & NavBarProps & { children?: React.ReactNode }
 ) => {
-  return <NavBar {...args} />;
+  return (
+    <NavBar {...args}>
+      <div className="text-white p-2">NickLand.me</div>
+    </NavBar>
+  );
 };
-WithAlternateLogo.args = {
-  url:
-    "https://seeklogo.com/images/G/general-motors-logo-0CD2430569-seeklogo.com.png",
+WithNoImage.args = {
+  ...Primary.args,
 };
