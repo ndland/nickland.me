@@ -22,7 +22,7 @@ export const Primary = (
   </NavBar>
 );
 Primary.args = {
-  classes: "items-center justify-between flex bg-gray-800 px-2",
+  className: "items-center justify-between flex bg-gray-800 px-2",
 };
 
 export const WithScrollableText = (
