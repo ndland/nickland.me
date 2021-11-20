@@ -2,12 +2,16 @@ import React, { FC, HTMLAttributes, ReactNode } from "react";
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
-  classes?: string;
+  className?: string;
+  label?: string;
 }
 
-export const NavBar: FC<NavBarProps> = ({ children, classes }) => {
+export const NavBar: FC<NavBarProps> = ({ children, className, label }) => {
   return (
-    <div className={classes?.concat(" sticky top-0 rounded-b-md")}>
+    <div
+      aria-label={label}
+      className={className?.concat(" sticky top-0 rounded-b-md")}
+    >
       {children}
     </div>
   );

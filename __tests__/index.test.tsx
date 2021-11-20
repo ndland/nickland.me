@@ -7,11 +7,17 @@ import { render, screen } from "@testing-library/react";
 import Home from "../pages/index";
 
 describe("Home", () => {
-  it("renders with an AppBar", () => {
+  it("renders with a NavBar", () => {
     render(<Home />);
 
-    const appBar = screen.getByLabelText("menu");
+    const navBar = screen.getByLabelText("navbar");
 
-    expect(appBar).toBeInTheDocument();
+    expect(navBar).toBeInTheDocument();
+  });
+
+  it("renders the text 'Nickland.me'", () => {
+    render(<Home />);
+
+    expect(screen.getByText(/nickland.me/i)).toBeInTheDocument();
   });
 });
