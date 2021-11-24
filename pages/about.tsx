@@ -1,7 +1,13 @@
 import { NextPage } from "next";
+import { Header } from "../components/Header";
 
 const About: NextPage = () => {
-  return <div>About</div>;
+  return (
+    <>
+      <Header />
+      <div>About</div>
+    </>
+  );
 };
 
 export default About;
