@@ -25,12 +25,6 @@ describe("Home", () => {
     expect(navBar).toBeInTheDocument();
   });
 
-  it("renders the text 'Nickland.me'", () => {
-    render(<Home />);
-
-    expect(screen.getByText(/nickland.me/i)).toBeInTheDocument();
-  });
-
   it("will navigate to the 'About' page when the about button is clicked", () => {
     render(<Home />);
 

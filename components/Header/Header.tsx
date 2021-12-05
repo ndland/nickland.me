@@ -10,9 +10,9 @@ export const Header = () => {
       className="text-white bg-gray-800 text-center flex justify-between items-center p-4"
     >
       <button className="text-3xl" onClick={() => router.push("/")}>
-        Nickland.me
+        Nick Land
       </button>
-      <div className="flex space-x-4">
+      <div className="inline-flex space-x-4 text-lg">
         <button
           className={`${router.pathname === "/about" && "text-green-300"}`}
           onClick={() => router.push("/about")}
