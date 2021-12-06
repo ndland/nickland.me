@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { ExclamationIcon } from "@heroicons/react/solid";
 import { Header } from "../components/Header";
 
 const Home: NextPage = () => {
@@ -12,24 +11,36 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="flex flex-col text-lg p-4 text-center">
+      <div className="justify-center">
+        <div className="flex items-center justify-center">
+          <img
+            className="rounded-full m-8"
+            width="200"
+            alt="The author"
+            src="me.jpeg"
+          />
+          <div className="text-center">
+            <div className="text-gray-400">#FullStackDeveloper</div>
+            <div className="text-6xl">Nick Land</div>
+            <div>Full-Stack developer. Lifelong Learner. Hobbyist.</div>
+          </div>
+        </div>
+      </div>
+      <div className="mb-auto text-center text-red-600 mt-8">
+        I am currently working on this site. I will be updating quite
+        frequently. Chack back for more updates!
+      </div>
+      <div className="flex-col text-center justify-center mt-8">
+        This site is built with the following:
         <ul>
-          <li>Dad</li>
-          <li>Learner</li>
-          <li>Tinkerer</li>
+          <li>
+            <a href="https://nextjs.org">Nextjs</a>
+          </li>
+          <li>
+            <a href="https://tailwindcss.com">TailWind CSS</a>
+          </li>
+          <li>A lot of love</li>
         </ul>
-        <p className="pt-4">
-          I am a master of none; I am a jack of all trades. I have many hobbies,
-          and coding is one of them.
-          <span className="flex justify-center items-center text-red-500">
-            <ExclamationIcon className="w-8 " />
-            <span className="mx-2">
-              This site is under construction, I will be updating often, so
-              please check back!
-            </span>
-            <ExclamationIcon className="w-8 " />
-          </span>
-        </p>
       </div>
     </>
   );
