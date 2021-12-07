@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Header } from "../components/Header";
+import { HeartIcon } from "@heroicons/react/solid";
 
 const Home: NextPage = () => {
   return (
@@ -11,37 +12,41 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="justify-center">
-        <div className="flex items-center justify-center">
-          <img
-            className="rounded-full m-8"
-            width="200"
-            alt="The author"
-            src="me.jpeg"
-          />
-          <div className="text-center">
-            <div className="text-gray-400">#FullStackDeveloper</div>
-            <div className="text-6xl">Nick Land</div>
-            <div>Full-Stack developer. Lifelong Learner. Hobbyist.</div>
-          </div>
+      <div className="flex justify-center items-center space-x-12 mt-16">
+        <img
+          className="h-48 w-48 rounded-full"
+          alt="The author"
+          src="me.jpeg"
+        />
+        <div className="space-y-2">
+          <div className="text-gray-400">#FullStackDeveloper</div>
+          <div className="text-5xl font-bold">Nick Land</div>
+          <div>Full-Stack developer. Lifelong Learner. Hobbyist.</div>
         </div>
       </div>
-      <div className="mb-auto text-center text-red-600 mt-8">
-        I am currently working on this site. I will be updating quite
-        frequently. Chack back for more updates!
+      <div className="flex justify-center mt-48">
+        <div className="text-gray-500 font-sans font-semibold">
+          I am currently working on this site. I will be updating quite
+          frequently. Chack back for more updates!
+        </div>
       </div>
-      <div className="flex-col text-center justify-center mt-8">
-        This site is built with the following:
-        <ul>
-          <li>
-            <a href="https://nextjs.org">Nextjs</a>
-          </li>
-          <li>
-            <a href="https://tailwindcss.com">TailWind CSS</a>
-          </li>
-          <li>A lot of love</li>
-        </ul>
-      </div>
+      <footer className="fixed bottom-0 w-full bg-gray-800 p-4 text-white">
+        <div className="flex justify-center space-x-4 items-center">
+          <p>This site is built with the following:</p>
+          <ul className="flex space-x-4 items-center">
+            <li>
+              <a href="https://nextjs.org">Nextjs</a>
+            </li>
+            <li>
+              <a href="https://tailwindcss.com">TailWind CSS</a>
+            </li>
+            <div className="flex space-x-1">
+              <li>A lot of love</li>
+              <HeartIcon className="h-6 text-red-500" />
+            </div>
+          </ul>
+        </div>
+      </footer>
     </>
   );
 };
