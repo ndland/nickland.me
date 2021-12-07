@@ -8,10 +8,7 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
 
 export const NavBar: FC<NavBarProps> = ({ children, className, label }) => {
   return (
-    <div
-      aria-label={label}
-      className={className?.concat(" sticky top-0 rounded-b-md")}
-    >
+    <div aria-label={label} className={className?.concat(" sticky top-0")}>
       {children}
     </div>
   );
