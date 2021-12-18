@@ -18,19 +18,19 @@ describe("Header", () => {
     expect(screen.getByText(/nick land/i)).toBeInTheDocument();
   });
 
-  it("sets 'text-green-300' class on the active page", () => {
+  it("sets 'text-gray-400' class on the active page", () => {
     render(<Header />);
 
     const aboutButton = screen.getByRole("button", { name: /about/i });
 
-    expect(aboutButton).toHaveClass("text-green-300");
+    expect(aboutButton).toHaveClass("text-gray-400");
   });
 
-  it("does not set 'text-green-300' on the page that is not active", () => {
+  it("does not set 'text-gray-400' on the page that is not active", () => {
     render(<Header />);
 
     const contactButton = screen.getByRole("button", { name: /contact/i });
 
-    expect(contactButton).not.toHaveClass("text-green-300");
+    expect(contactButton).not.toHaveClass("text-gray-400");
   });
 });
